@@ -1,0 +1,16 @@
+[package]
+name = "keycat"
+version = "0.0.0"
+description = "A cross-platform keycast program with a fully customizable look."
+authors = ["Mikkel ALMONTE--RINGAUD <mikkel@milescode.dev>"]
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2.0.0-beta", features = [] }
+
+[dependencies]
+tauri = { version = "2.0.0-beta", features = [] }
+tauri-plugin-shell = "2.0.0-beta"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rdev = { git = "https://github.com/fufesou/rdev" }
