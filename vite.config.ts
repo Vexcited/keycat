@@ -1,9 +1,10 @@
 import { defineConfig } from "vite";
+
+import unocss from "unocss/vite";
 import solid from "vite-plugin-solid";
 
-// https://vitejs.dev/config/
-export default defineConfig(async () => ({
-  plugins: [solid()],
+export default defineConfig({
+  plugins: [unocss(), solid()],
 
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
   //
@@ -18,4 +19,4 @@ export default defineConfig(async () => ({
       ignored: ["**/src-tauri/**"],
     },
   },
-}));
+});
