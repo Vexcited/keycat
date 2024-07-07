@@ -13,7 +13,14 @@
       {
         "title": "Keycat",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "transparent": true,
+        "titleBarStyle": "Transparent",
+        "skipTaskbar": true,
+        "alwaysOnTop": true,
+        "decorations": false,
+        "maximized": true,
+        "shadow": false
       }
     ],
     "security": {

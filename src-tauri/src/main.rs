@@ -12,6 +12,9 @@ struct KeyboardRawPayload {
 fn main() {
   tauri::Builder::default()
     .setup(|app| {
+      let main_window = app.get_webview_window("main").unwrap();
+      let _ = main_window.set_ignore_cursor_events(true);
+
       let app = app.handle().clone();
       let mut keyboard = Keyboard::new();
 
