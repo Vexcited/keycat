@@ -1,6 +1,19 @@
 # Keycat
 
-A cross-platform keycast program that uses Tauri (WebView) for a fully customizable look.
+A cross-platform keycast program that uses [Tauri (2.0)](https://beta.tauri.app/), [SolidJS](https://solidjs.com/) and [rdev](https://github.com/fufesou/rdev).
+
+## Roadmap
+
+- [x] Display a chat using key strokes.
+- [ ] Display key strokes history (like a log).
+- [ ] Add a trayer to manage the program
+  - [ ] Switch to keystrokes
+  - [ ] Switch to chat
+  - [ ] Pause/Resume
+  - [ ] Settings
+  - [ ] Reset
+  - [ ] About
+  - [ ] Exit
 
 ## Alternatives
 
