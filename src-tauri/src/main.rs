@@ -1,7 +1,11 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use rdev::{listen, Event, EventType, Keyboard, KeyboardState};
-use tauri::Manager;
+use tauri::{
+  image::Image,
+  tray::TrayIconBuilder,
+  Manager
+};
 
 #[derive(Clone, serde::Serialize)]
 struct KeyboardRawPayload {
@@ -14,6 +18,11 @@ fn main() {
     .setup(|app| {
       let main_window = app.get_webview_window("main").unwrap();
       let _ = main_window.set_ignore_cursor_events(true);
+
+      let _ = TrayIconBuilder::new()
+          .icon(Image::from_path("./icons/icon.png")?)
+          .tooltip("Keycat")
+          .build(app)?;
 
       let app = app.handle().clone();
       let mut keyboard = Keyboard::new();
